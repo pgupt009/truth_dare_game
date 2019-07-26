@@ -1,0 +1,56 @@
+h1{
+display:flex;
+justify-content: center;
+align-items: center;
+font-family: 'Pacifico', cursive;
+font-size: 100px;
+
+}
+
+
+
+body  {
+background-image: url("https://data.whicdn.com/images/189718030/original.gif");
+/* background-color: #cccccc; */
+background-repeat: repeat;
+background-size: 100%;
+
+}
+
+
+.oop{
+  display:flex;
+  justify-content: center;
+  background-color: #FFF198;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+
+#h1{
+
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+#center2{
+display:flex;
+align-items:center;
+justify-content: center;
+
+}
+
+
+#center{
+
+  display:flex;
+  justify-content: center;
+}
