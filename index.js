@@ -21,42 +21,59 @@ var arrayDare = [
 
 ];
 
-
+// TRUTH BUTTON --> RANDOM TRUTH
 var truthButton = $('#tb');
 truthButton.on('click', showTruth);
 
 var truthContainer  = $('.truthcontainer');
 function showTruth(){
 
-truthContainer.text(arrayTruth[2]);
-//truthContainer.append(`<img src="">`)
+var randomNum = Math.random();
+var multArrLength = randomNum * arrayTruth.length;
+var round = Math.floor(multArrLength);
+var showNum = arrayTruth[round];
+truthContainer.append(`<h2> ${showNum}</h2>`);
+
+
 };
 
+
+// DARE BUTTON --> RANDOM DARE
 var dareButton = $('#db');
 var dareContainer = $('.darecontainer');
 dareButton.on('click', showDare);
 
 function showDare(){
 
-dareContainer.text(arrayDare[4]);
-
-};
 
 
+  var randomNum = Math.random();
+  var multArrLength = randomNum * arrayDare.length;
+  var round = Math.floor(multArrLength);
+  var showNum = arrayDare[round];
+  dareContainer.append(`<h2> ${showNum}</h2>`);
+
+
+
+
+}
+
+// SECRET PASSCODE
 var submit = $('.submit');
 var secretContainer = $('.secretContainer');
-var secretCode = $('.secretPasscode').val();
+var secretCode = $('.secretPasscode');
 
 submit.on('click', checkCode);
 
-function checkCode(){
+function checkCode() {
 
-  if (secretCode.val() === "tech,sis")
+  if (secretCode.val() === "tech,sis") {
     secretContainer.text(`You have cracked the code!`);
     secretContainer.append(`<img src= "https://media1.tenor.com/images/40a215e4f3b2b2abc094eeb1a8471354/tenor.gif?itemid=6131865">`);
+}
   else {
     secretContainer.text(`bro that aint it`);
-    secretContainer.append(`<img src="https://media.giphy.com/media/8vUEXZA2me7vnuUvrs/giphy.gif">`)
+    secretContainer.append(`<img src="https://media.giphy.com/media/8vUEXZA2me7vnuUvrs/giphy.gif">`);
 }
 
 }
